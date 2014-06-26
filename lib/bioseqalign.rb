@@ -110,5 +110,42 @@ class BioSeqAlign
     fa.run
     fa.getAlignment
   end
-
+  #
+  # global alignment of seq1 and seq2, returns score.
+  #
+  def self.globalAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+    fa = GlobalAlign.new(seq1, seq2)
+    fa.setMatchScore(match)
+    fa.setMismatchScore(mismatch)
+    fa.setIndelScore(indel)
+    fa.run
+    fa.getAlignScore
+  end
+  #
+  # global alignment of seq1 and seq2, returns alignment.
+  #
+  # example:
+  # 
+  # [input]:: seq1 = <tt>CTGAGTCGATAA</tt>
+  #
+  #           seq2 = <tt>GGGGTCGATTTT</tt>
+  #
+  # [output]:: <tt>["CTGAGTCGA-TA", "AGGGGTCGATTT"]</tt>
+  #
+  # result of global alignment
+  #
+  # seq1: <tt>CTGAGTCGA-TA</tt>
+  #
+  # seq2: <tt>AGGGGTCGATTT</tt>
+  #
+  def self.globalAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+    fa = GlobalAlign.new(seq1, seq2)
+    fa.setMatchScore(match)
+    fa.setMismatchScore(mismatch)
+    fa.setIndelScore(indel)
+    fa.run
+    fa.getAlignment
+  end
+  
+  
 end

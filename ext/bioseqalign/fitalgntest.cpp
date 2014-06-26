@@ -4,6 +4,7 @@
 #include "FitAlign.hpp"
 #include "PrefixSuffixAlign.hpp"
 #include "LocalAlign.hpp"
+#include "GlobalAlign.hpp"
 
 using namespace Rice;
 
@@ -35,10 +36,14 @@ void Init_SeqAlign()
     .define_constructor(Constructor<PrefixSuffixAlign,std::string,std::string>())
     .define_method("run", &PrefixSuffixAlign::run)
     .define_method("getAlignment", &PrefixSuffixAlign::getAlignment);
-    //.define_method("getAlignmentArray", &PrefixSuffixAlign::getAlignmentArray);
   Data_Type<LocalAlign> rb_cLocalAlign = define_class<LocalAlign,PairwiseAlign>("LocalAlign")
     .define_constructor(Constructor<LocalAlign>())
     .define_constructor(Constructor<LocalAlign,std::string,std::string>())
     .define_method("run", &LocalAlign::run)
     .define_method("getAlignment", &LocalAlign::getAlignment);
+  Data_Type<GlobalAlign> rb_cGlobalAlign = define_class<GlobalAlign,PairwiseAlign>("GlobalAlign")
+    .define_constructor(Constructor<GlobalAlign>())
+    .define_constructor(Constructor<GlobalAlign,std::string,std::string>())
+    .define_method("run", &GlobalAlign::run)
+    .define_method("getAlignment", &GlobalAlign::getAlignment);
 }
