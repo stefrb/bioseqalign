@@ -1,5 +1,3 @@
-#require './PairwiseAlign'
-#require './FitAlign'
 require './SeqAlign'
 
 sa = PairwiseAlign.new("TCGA", "TCGA")
