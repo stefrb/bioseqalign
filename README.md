@@ -1,6 +1,6 @@
 # BioSeqAlign
-
 A gem to perform pairwise sequence alignment using the seqan library. Currently, only local alignment, prefix-suffix alignment (overhang), and fitting alignment (semi-global) are implemented.
+
 [![Gem Version](https://badge.fury.io/rb/bioseqalign.svg)](http://badge.fury.io/rb/bioseqalign)
 
 ## Why use this gem?
@@ -14,6 +14,12 @@ This gem relies on the following gems/libraries
 
 ## Install
 
+This gem requires SeqAn to be installed on the system, on ubuntu, this can be done by
+
+```
+apt-get install seqan-dev
+```
+
 To install the gem, run
 
 ```ruby
@@ -21,7 +27,7 @@ gem install bioseqalign
 ```
 
 ## Example
-Once you install the gem, you can start using it to align sequences. If you want to perform a fitting alignment, you can try the following.
+Once you install the gem, you can start using it. If you want to perform a fitting alignment, you can try the following.
 
 ```ruby    
 require 'bioseqalign'
