@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'stefano.rb@gmail.com'
   s.files = Dir['lib/**/*.rb'] + Dir['bin/*'] + Dir['ext/**/*']
   s.require_paths = ['lib', 'ext']
-  s.homepage    = 'http://rubygems.org/gems/bioseqalign'
+  s.homepage    = 'https://github.com/stefrb/bioseqalign'
   s.license 	= 'MIT'
   s.extensions = [ 'ext/bioseqalign/extconf.rb' ]
   s.add_dependency 'rice'
