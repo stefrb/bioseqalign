@@ -1,5 +1,5 @@
 # BioSeqAlign
-A gem to perform pairwise sequence alignment using the seqan library. Currently, only local alignment, prefix-suffix alignment (overhang), and fitting alignment (semi-global) are implemented.
+A gem to perform pairwise sequence alignment using the seqan library. Currently, local alignment, global alignment, prefix-suffix alignment (overhang), and fitting alignment (semi-global) are implemented.
 
 [![Gem Version](https://badge.fury.io/rb/bioseqalign.svg)](http://badge.fury.io/rb/bioseqalign)
 

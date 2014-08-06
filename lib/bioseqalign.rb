@@ -1,10 +1,13 @@
 require 'bioseqalign/SeqAlign'
 
-class BioSeqAlign
+module BioSeqAlign
+
+  include SeqAlign
+
   #
   # fit seq2 into seq1, returns the score 
   #
-  def self.fitAlignScore(seq1, seq2, match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.fitAlignScore(seq1, seq2, match=1, mismatch=-1, indel=-1)
     fa = FitAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -28,7 +31,7 @@ class BioSeqAlign
   #
   # seq2: <tt>--------GCTG--------</tt>
   #
-  def self.fitAlignStr(seq1, seq2, match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.fitAlignStr(seq1, seq2, match=1, mismatch=-1, indel=-1)
     fa = FitAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -40,7 +43,7 @@ class BioSeqAlign
   # prefix-suffix alignment, returns score. Prefix of seq2 aligned with
   # suffix of seq1
   #
-  def self.prefixSuffixAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.prefixSuffixAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = PrefixSuffixAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -66,7 +69,7 @@ class BioSeqAlign
   #
   # seq2: <tt>--------AAAAAACTGATAC</tt>
   #
-  def self.prefixSuffixAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.prefixSuffixAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = PrefixSuffixAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -77,7 +80,7 @@ class BioSeqAlign
   #
   # local alignment of seq1 and seq2, returns score.
   #
-  def self.localAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.localAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = LocalAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -102,7 +105,7 @@ class BioSeqAlign
   #
   # seq2: <tt>GTCGAT</tt>
   #
-  def self.localAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.localAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = LocalAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -113,7 +116,7 @@ class BioSeqAlign
   #
   # global alignment of seq1 and seq2, returns score.
   #
-  def self.globalAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.globalAlignScore(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = GlobalAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -138,7 +141,7 @@ class BioSeqAlign
   #
   # seq2: <tt>AGGGGTCGATTT</tt>
   #
-  def self.globalAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
+  def BioSeqAlign.globalAlignStr(seq1, seq2,  match=1, mismatch=-1, indel=-1)
     fa = GlobalAlign.new(seq1, seq2)
     fa.setMatchScore(match)
     fa.setMismatchScore(mismatch)
@@ -146,6 +149,5 @@ class BioSeqAlign
     fa.run
     fa.getAlignment
   end
-  
-  
+    
 end
