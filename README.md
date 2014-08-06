@@ -42,7 +42,7 @@ Which would produce the following output
 If you just want the score
 
 ```ruby
-BioSeqAlign.fitAlignScore(seqA, seqB)
+BioSeqAlign.fitAlignScore("AAAAAAAAGCTGAAAAAAAA", "GCTG")
 ```
 
 Which returns a value of
