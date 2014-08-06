@@ -1,3 +1,4 @@
 *~
-bioseqalign-0.0.1.gem
+bioseqalign-*.gem
 Makefile
+ext/bioseqalign/runTest.rb
