@@ -2,3 +2,5 @@
 bioseqalign-*.gem
 Makefile
 ext/bioseqalign/runTest.rb
+*.o
+*.so
