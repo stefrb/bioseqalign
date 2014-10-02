@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rake (10.3.2)
+    rice (1.6.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  rice

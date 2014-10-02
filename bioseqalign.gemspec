@@ -1,6 +1,9 @@
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+require 'bioseqalign/version'
+
 Gem::Specification.new do |s|
   s.name        = 'bioseqalign'
-  s.version     = '0.0.2'
+  s.version     = BioSeqAlign::VERSION
   s.date        = '2014-08-06'
   s.summary     = "Pairwise sequence alignment using seqan"
   s.description = "A simple gem to perform fast pairwise sequence alignment using seqan"
