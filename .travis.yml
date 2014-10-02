@@ -7,6 +7,7 @@ rvm:
 
 before_install:
 - sudo apt-get install seqan-dev
+- gem install rice
 
 install:
 - ruby ext/bioseqalign/extconf.rb && cd ext/bioseqalign/ && make
