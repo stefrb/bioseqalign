@@ -10,4 +10,4 @@ before_install:
 - gem install rice
 
 install:
-- ruby ext/bioseqalign/extconf.rb && cd ext/bioseqalign/ && make
+- cd ext/bioseqalign/ && ruby extconf.rb && make
