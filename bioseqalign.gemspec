@@ -4,7 +4,7 @@ require 'bioseqalign/version'
 Gem::Specification.new do |s|
   s.name        = 'bioseqalign'
   s.version     = BioSeqAlign::VERSION
-  s.date        = '2014-08-06'
+  s.date        = Time.now.to_s.split(" ")[0]
   s.summary     = "Pairwise sequence alignment using seqan"
   s.description = "A simple gem to perform fast pairwise sequence alignment using seqan"
   s.authors     = ["Stefano R.B."]
