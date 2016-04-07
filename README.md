@@ -30,10 +30,10 @@ gem install bioseqalign
 If you do not have permissions to install SeqAn system-wide, and require a user directory install of seqan-dev, you can specify the path by:
 
 ```
-gem install bioseqalign -- --with-seqan-include=/home/username/seqan-1.3.1/
+gem install bioseqalign -- --with-seqan-include=/home/username/seqan-1.4.1/
 ```
 
-Note, seqan versions 1.4+ will not compile properly with bioseqalign, and version 1.3.1 is recommended, it can be found [here](https://www.seqan.de/downloads/?did=31).
+Note, has only been tested with seqan version 1.4+, it can be found [here](https://www.seqan.de/downloads/?did=31).
 
 ## Example
 Once you install the gem, you can start using it. If you want to perform a fitting alignment, you can try the following.

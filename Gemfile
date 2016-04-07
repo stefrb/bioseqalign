@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'rice'
+gem 'rice', '~> 2.1'
 gem 'rake'

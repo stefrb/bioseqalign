@@ -14,5 +14,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/stefrb/bioseqalign'
   s.license 	= 'MIT'
   s.extensions = [ 'ext/bioseqalign/extconf.rb' ]
-  s.add_dependency 'rice'
+  s.add_dependency 'rice', '~> 2.1'
 end
