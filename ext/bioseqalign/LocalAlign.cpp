@@ -13,10 +13,8 @@ Rice::Array LocalAlign::getAlignment() {
   assignSource(row(ali, 1), seq2);
   
   //localAlignment(ali, Score<int,Simple>(matchScore,mismatchScore,indelScore), SmithWaterman());
-  localAlignment(ali, Score<int>(matchScore,mismatchScore,indelScore), SmithWaterman());
-
-  //std::cout<<row(ali, 0)<<std::endl;
-  //std::cout<<row(ali, 1)<<std::endl;
+  //localAlignment(ali, Score<int>(matchScore,mismatchScore,indelScore), SmithWaterman());
+  localAlignment(ali, Score<int>(matchScore,mismatchScore,indelScore));
 
   typedef Iterator<TRow>::Type TRowIterator;
   TRowIterator it = begin(row(ali, 0));
@@ -34,10 +32,6 @@ Rice::Array LocalAlign::getAlignment() {
     else s_row2 += (*it2);
   }
 
-  // std::cout<<s_row1<<std::endl;
-  // std::cout<<s_row2<<std::endl;
-  // std::cout<<ali<<std::endl;
-  
   return getArrayFromAlignStr(s_row1+s_row2);
 }
 
@@ -48,6 +42,7 @@ void LocalAlign::run() {
   assignSource(row(ali, 0), seq1);
   assignSource(row(ali, 1), seq2);
   
-  score = localAlignment(ali, Score<int,Simple>(matchScore,mismatchScore,indelScore), SmithWaterman());
+  //score = localAlignment(ali, Score<int,Simple>(matchScore,mismatchScore,indelScore), SmithWaterman());
+  score = localAlignment(ali, Score<int,Simple>(matchScore,mismatchScore,indelScore));
 }
 
